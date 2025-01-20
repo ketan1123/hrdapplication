@@ -30,7 +30,7 @@ pipeline {
             steps {
                 // Push the Docker image to Docker Hub
                 script {
-                    withDockerRegistry([credentialsId: 'dockerhub-credentials', url: 'https://index.docker.io/v1/']) {
+                    withDockerRegistry([credentialsId: '8f21f922-09cb-4cf6-944e-e353b46fd9f4', url: 'https://index.docker.io/v1/']) {
                         bat "docker push ${DOCKER_IMAGE}"
                     }
                 }
